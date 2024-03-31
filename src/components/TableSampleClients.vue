@@ -8,6 +8,7 @@ import BaseLevel from '@/components/BaseLevel.vue'
 import BaseButtons from '@/components/BaseButtons.vue'
 import BaseButton from '@/components/BaseButton.vue'
 import UserAvatar from '@/components/UserAvatar.vue'
+import { mdiPencil } from '@mdi/js'
 
 defineProps({
   checkable: Boolean
@@ -82,11 +83,10 @@ const checked = (isChecked, client) => {
       <tr>
         <th v-if="checkable" />
         <th />
-        <th>Name</th>
-        <th>Company</th>
-        <th>City</th>
-        <th>Progress</th>
-        <th>Created</th>
+        <th>Nome</th>
+        <th>Cargo</th>
+        <th>Cidade</th>
+        <th>Criado</th>
         <th />
       </tr>
     </thead>
@@ -105,11 +105,6 @@ const checked = (isChecked, client) => {
         <td data-label="City">
           {{ client.city }}
         </td>
-        <td data-label="Progress" class="lg:w-32">
-          <progress class="flex w-2/5 self-center lg:w-full" max="100" :value="client.progress">
-            {{ client.progress }}
-          </progress>
-        </td>
         <td data-label="Created" class="lg:w-1 whitespace-nowrap">
           <small class="text-gray-500 dark:text-slate-400" :title="client.created">{{
             client.created
@@ -118,6 +113,7 @@ const checked = (isChecked, client) => {
         <td class="before:hidden lg:w-1 whitespace-nowrap">
           <BaseButtons type="justify-start lg:justify-end" no-wrap>
             <BaseButton color="info" :icon="mdiEye" small @click="isModalActive = true" />
+            <BaseButton color="warning" :icon="mdiPencil" small @click="isModalActive = true" />
             <BaseButton
               color="danger"
               :icon="mdiTrashCan"
@@ -142,7 +138,7 @@ const checked = (isChecked, client) => {
           @click="currentPage = page"
         />
       </BaseButtons>
-      <small>Page {{ currentPageHuman }} of {{ numPages }}</small>
+      <small>Página {{ currentPageHuman }} de {{ numPages }}</small>
     </BaseLevel>
   </div>
 </template>

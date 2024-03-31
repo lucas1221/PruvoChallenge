@@ -1,21 +1,17 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import Style from '@/views/StyleView.vue'
+//import Style from '@/views/StyleView.vue'
 import Home from '@/views/HomeView.vue'
 
 const routes = [
   {
-    meta: {
-      title: 'Select style'
-    },
     path: '/',
-    name: 'style',
-    component: Style
+    redirect: '/login'
   },
   {
     // Document title tag
     // We combine it with defaultDocumentTitle set in `src/main.js` on router.afterEach hook
     meta: {
-      title: 'Dashboard'
+      title: 'Painel'
     },
     path: '/dashboard',
     name: 'dashboard',
@@ -23,7 +19,7 @@ const routes = [
   },
   {
     meta: {
-      title: 'Tables'
+      title: 'Tabelas'
     },
     path: '/tables',
     name: 'tables',
@@ -31,7 +27,7 @@ const routes = [
   },
   {
     meta: {
-      title: 'Forms'
+      title: 'Formulários'
     },
     path: '/forms',
     name: 'forms',
@@ -39,7 +35,7 @@ const routes = [
   },
   {
     meta: {
-      title: 'Profile'
+      title: 'Perfil'
     },
     path: '/profile',
     name: 'profile',
@@ -71,7 +67,7 @@ const routes = [
   },
   {
     meta: {
-      title: 'Error'
+      title: 'Erro'
     },
     path: '/error',
     name: 'error',

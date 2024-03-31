@@ -12,8 +12,8 @@ import BaseButtons from '@/components/BaseButtons.vue'
 import LayoutGuest from '@/layouts/LayoutGuest.vue'
 
 const form = reactive({
-  login: 'john.doe',
-  pass: 'highly-secure-password-fYjUw-',
+  login: '',
+  pass: '',
   remember: true
 })
 
@@ -28,7 +28,7 @@ const submit = () => {
   <LayoutGuest>
     <SectionFullScreen v-slot="{ cardClass }" bg="purplePink">
       <CardBox :class="cardClass" is-form @submit.prevent="submit">
-        <FormField label="Login" help="Please enter your login">
+        <FormField label="Login" help="Por favor, digite seu login">
           <FormControl
             v-model="form.login"
             :icon="mdiAccount"
@@ -37,7 +37,7 @@ const submit = () => {
           />
         </FormField>
 
-        <FormField label="Password" help="Please enter your password">
+        <FormField label="Senha" help="Por favor, digite sua senha">
           <FormControl
             v-model="form.pass"
             :icon="mdiAsterisk"
@@ -50,14 +50,13 @@ const submit = () => {
         <FormCheckRadio
           v-model="form.remember"
           name="remember"
-          label="Remember"
+          label="Lembrar Senha"
           :input-value="true"
         />
 
         <template #footer>
           <BaseButtons>
-            <BaseButton type="submit" color="info" label="Login" />
-            <BaseButton to="/dashboard" color="info" outline label="Back" />
+            <BaseButton type="submit" color="info" label="Entrar" />
           </BaseButtons>
         </template>
       </CardBox>
