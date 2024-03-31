@@ -32,7 +32,7 @@ const menuClick = (event, item) => {
   }
 
   if (item.isLogout) {
-    //
+    router.push('/login')
   }
 }
 </script>
@@ -79,3 +79,4 @@ const menuClick = (event, item) => {
     </div>
   </div>
 </template>
+

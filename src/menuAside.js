@@ -7,7 +7,7 @@ export default [
   {
     to: '/dashboard',
     icon: mdiMonitor,
-    label: 'Painel'
+    label: 'Início'
   },
   {
     to: '/tables',

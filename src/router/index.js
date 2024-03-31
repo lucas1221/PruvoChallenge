@@ -11,7 +11,7 @@ const routes = [
     // Document title tag
     // We combine it with defaultDocumentTitle set in `src/main.js` on router.afterEach hook
     meta: {
-      title: 'Painel'
+      title: 'Início'
     },
     path: '/dashboard',
     name: 'dashboard',

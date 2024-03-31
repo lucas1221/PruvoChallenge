@@ -22,7 +22,7 @@ const isModalActive = ref(false)
 
 const isModalDangerActive = ref(false)
 
-const perPage = ref(5)
+const perPage = ref(10)
 
 const currentPage = ref(0)
 
