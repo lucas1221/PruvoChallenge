@@ -86,7 +86,7 @@ const checked = (isChecked, client) => {
         <th>Nome</th>
         <th>Cargo</th>
         <th>Cidade</th>
-        <th>Criado</th>
+        <th>Criado em</th>
         <th />
       </tr>
     </thead>

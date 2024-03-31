@@ -7,7 +7,7 @@ import { gradientBgPinkRed } from '@/colors'
 
 <template>
   <SectionBanner :class="gradientBgPinkRed">
-    <h1 class="text-3xl text-white mb-6">Sistema de Gestão de Pessoas com controle de acesso por cargo</h1>
+    <h1 class="text-3xl text-white mb-6">Sistema de Gestão de Pessoas com Controle de Acesso por Cargo</h1>
     <div>
       <BaseButton
         href="https://github.com/lucas1221/PruvoChallenge"

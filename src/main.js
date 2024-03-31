@@ -6,12 +6,21 @@ import router from './router'
 import { useMainStore } from '@/stores/main.js'
 
 import './css/main.css'
+// Vuetify
+import 'vuetify/styles'
+import { createVuetify } from 'vuetify'
+import * as components from 'vuetify/components'
+import * as directives from 'vuetify/directives'
 
+const vuetify = createVuetify({
+  components,
+  directives,
+})
 // Init Pinia
 const pinia = createPinia()
 
 // Create Vue app
-createApp(App).use(router).use(pinia).mount('#app')
+createApp(App).use(router).use(pinia).use(vuetify).mount('#app')
 
 // Init main store
 const mainStore = useMainStore(pinia)
